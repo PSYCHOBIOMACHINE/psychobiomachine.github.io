@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psychobioMACHINE</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: 'Orbitron', sans-serif;
+            background-color: #000000;
+            color: #333;
+            margin: 0;
+        }
+
+        .timer-container {
+            text-align: center;
+            width: 375px;
+            height: 375px;
+            background-color: #ffffff;
+            border: 1px solid #000000;
+            border-radius: 50%; /* Makes the box a large circle */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 100px rgb(153, 209, 255);
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #333;
+            margin: 20px;
+        }
+
+        #timer {
+            font-size: 2.5em;
+            color: #333;
+            margin: 0px 0;
+        }
+
+        .controls {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button {
+            width: 60px;
+            height: 60px;
+            border: 4px solid #2200ff; /* More vibrant blue border */
+            background-color: #1702ff;
+            color: #ffffff;
+            border-radius: 50%; /* Makes buttons circular */
+            cursor: pointer;
+            font-size: .9em;
+            font-family: orbitron;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s, color 0.3s
+        
+        }
+
+        .button:hover {
+            background-color: #ffffff;
+            color: #ffffff;
+            border: 4px solid #a3f7ff; /* More vibrant blue border */
+
+        }
+
+        #score-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        .diamond {
+            width: 20px;
+            height: 20px;
+            background-color: #91ffff; /* Diamond color */
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="timer-container">
+    <p><b>psychobioMACHINE</b></p>
+    <h1><strong>flow timer</strong></h1>
+    <div id="timer">30:00</div>
+    <div class="controls">
+        <button class="button start" onclick="startTimer()">Start</button>
+        <button class="button pause" onclick="pauseTimer()">Pause</button>
+        <button class="button reset" onclick="resetTimer()">Reset</button>
+    </div>
+    <div id="score-container"></div>
+</div>
+
+<script>
+    let workTime = 30 * 60; // 30 minutes in seconds
+    let breakTime = 5 * 60; // 5 minutes in seconds
+    let isWorkSession = true;
+    let time = workTime;
+    let timerInterval;
+    let completedSessions = 0;
+
+    function updateTimerDisplay() {
+        const minutes = Math.floor(time / 60).toString().padStart(2, '0');
+        const seconds = (time % 60).toString().padStart(2, '0');
+        document.getElementById("timer").textContent = `${minutes}:${seconds}`;
+    }
+
+    function addDiamond() {
+        const scoreContainer = document.getElementById("score-container");
+        const diamond = document.createElement("div");
+        diamond.classList.add("diamond");
+        scoreContainer.appendChild(diamond);
+    }
+
+    function startTimer() {
+        if (!timerInterval) {
+            timerInterval = setInterval(() => {
+                time--;
+                updateTimerDisplay();
+
+                if (time <= 0) {
+                    clearInterval(timerInterval);
+                    timerInterval = null;
+                    isWorkSession = !isWorkSession;
+                    time = isWorkSession ? workTime : breakTime;
+                    updateTimerDisplay();
+                    
+                    if (isWorkSession) {
+                        alert("Time for work!");
+                    } else {
+                        alert("Take a break!");
+                        completedSessions++;
+                        addDiamond();
+                    }
+                }
+            }, 1000);
+        }
+    }
+
+    function pauseTimer() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+
+    function resetTimer() {
+        clearInterval(timerInterval);
+        timerInterval = null;
+        isWorkSession = true;
+        time = workTime;
+        updateTimerDisplay();
+
+        // Clear the diamonds and reset completed sessions
+        document.getElementById("score-container").innerHTML = "";
+        completedSessions = 0;
+    }
+
+    updateTimerDisplay();
+</script>
+
+</body>
+</html>
