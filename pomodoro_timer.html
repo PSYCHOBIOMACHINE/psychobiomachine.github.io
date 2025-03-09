@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>psychobioMACHINE</title>
+    <title>psychobioMACHINE flow timer pomodoro</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
         
@@ -17,6 +17,10 @@
             color: #333;
             margin: 0;
         }
+
+        p {font-size: 15px
+
+         }
 
         .timer-container {
             text-align: center;
@@ -35,7 +39,7 @@
         h1 {
             font-size: 3em;
             color: #333;
-            margin: 20px;
+            margin: 1px;
         }
 
         #timer {
@@ -71,7 +75,7 @@
         .button:hover {
             background-color: #ffffff;
             color: #ffffff;
-            border: 4px solid #a3f7ff; /* More vibrant blue border */
+            border: 2px solid #a3f7ff; /* More vibrant blue border */
 
         }
 
@@ -94,7 +98,7 @@
 <body>
 
 <div class="timer-container">
-    <p><b>psychobioMACHINE</b></p>
+    <p><strong>psychobioMACHINE</strong></p>
     <h1><strong>flow timer</strong></h1>
     <div id="timer">30:00</div>
     <div class="controls">
@@ -106,7 +110,7 @@
 </div>
 
 <script>
-    let workTime = 30 * 60; // 30 minutes in seconds
+    let workTime = 25 * 60; // 25 minutes in seconds
     let breakTime = 5 * 60; // 5 minutes in seconds
     let isWorkSession = true;
     let time = workTime;

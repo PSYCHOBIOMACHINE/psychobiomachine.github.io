@@ -1,1 +1,458 @@
-<!-- this will be a stylesheet for index.html -->
+
+
+*, :before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width:100vw;
+    
+    
+}
+
+html{
+    background-color: rgb(0, 0, 0);
+    background-image: url('https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7777045-7e88-4e8d-b08e-a8701f4d27c2_736x1312.png');
+    background-repeat: repeat;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1240px;
+    
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Orbitron', sans-serif;
+    color: white;
+    text-shadow: 0 1.5px 3px rgb(17, 0, 255);
+    letter-spacing: .06rem;
+    //background-color:rgba(0, 0, 255, 0.257);
+}
+
+p {
+    font-family: monospace;
+    font-weight: 200;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 1.3rem;
+    color: white;
+  }
+
+
+header {
+    margin: 0;
+    padding: 0 30px;
+    position: fixed;
+    width:100%;
+    max-width: 1241px;
+    background-color:rgba(0, 123, 255, 0.305);
+    height: 2.5rem;
+}
+
+#headerimg{
+    position:absolute;
+    bottom: 7px;
+    left: 10px;
+    height: 1.7rem;
+    padding: 3px 5px;
+    background-color: rgba(0, 0, 255, 0.19);
+    border-radius: 3px;
+
+    
+}
+#nav {
+    position: absolute;
+    bottom: 6px;
+    display:flex;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    position: absolute;
+    right:8px;
+
+
+
+}
+
+nav > ul{
+    display:flex;
+    flex-flow:row wrap;
+    justify-content: space-between;
+    gap: .3rem;
+}
+
+nav > ul > li {
+    list-style-type: none;
+    padding: 2px 5px 3px;
+    background-color: rgba(0, 0, 255, 0.343);
+    border-radius: 3px;
+    
+}
+
+nav > ul > li > a {
+    background: transparent;
+    text-decoration: none;
+    font-size: 15px;
+    color: white;
+    font-family: Orbitron;
+}
+li > a:hover {
+    padding: 2px 5px 3px;
+    color: rgb(114, 255, 206);
+    background-color:blue;
+    font-weight: 600;
+    /*text-shadow:0 0 10px rgb(0, 255, 247)*/
+}
+
+@media screen and (max-width: 710px) {
+        header {
+            height: 4rem;
+            display: flex;
+            align-items: top;
+            justify-content: center;
+        }
+        #headerimg {
+            display: block;
+            margin: 0 auto;
+            justify-content: center;
+            top:7px;
+            left: 0;
+            position: relative;
+        }
+        nav {
+            margin:0;
+            display:flex;
+            justify-content: center;
+            width:100%;
+            
+        }
+        nav > ul {
+            display: flex;
+            flex-flow: row wrap;
+            margin:0;
+            top: 3px;
+            left: 8px;
+            padding: 0;
+            width: 100%;
+            position: relative;
+            align-items: center;
+            justify-content:space-evenly;
+        }
+        nav > ul > li, nav > ul > li > a {
+            font-size: .8rem;
+
+        }
+}
+@media screen and (max-width: 360px) {
+    #headerimg {
+        height: 35%;
+        width: auto;
+        top:7px;
+        left: 0;
+        position: relative;
+    }
+
+    nav > ul > li, nav > ul > li > a {
+        font-size: .7rem;
+    }
+}
+
+/* hero section, needs a welcome statement and ICONS in bottom right corner*/
+div.section1 {
+    display: flex;
+    margin: 0;
+    padding-bottom: 0;
+    border: 0;
+    /*border: 0 5px 0 solid blue;*/
+}
+div.hero-img {
+    object-fit: cover;
+    height:100vh;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/* Welcome section, ABOUT ME DESCRIPTION*/
+
+div.section2 {
+    display: block;
+    padding: 15px;
+    background-color: black;
+    border: 4px solid rgb(107, 255, 255);
+    background-image: url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExODhjdjJ3dDRtajNqNWYwdmgxZ2V0MnI4dW9scWN0MWF5N2pndDFvYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/AfZojRkixrdndGV8KN/giphy.gif');
+    background-size: cover;
+
+    /*background-image: url('https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWJ0czlvN2tlcjZrNG5mN2F4Z25uZW02YXhsNHZrMW9kMW81d3BsdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q0PmlPEnfIJibaXzYj/giphy.gif');
+    background-size: cover; */
+
+
+}
+
+.section2-text {
+    margin: 0;
+    padding: 10px 15px 0;
+}
+
+div.section2 h1 {
+    text-shadow: 0px 1.5px 3px rgb(25, 0, 255);
+}
+
+div.section2 p {
+    margin: 5px 0;
+    padding: 5px 0;
+    background: rgba(0, 0, 0, 0.325);
+    border-radius: 10px;
+    text-shadow: 0px 1.3px 3px rgb(13, 0, 255);
+
+}
+
+div.icons {
+    margin: 0px auto;
+    display: flex;
+    justify-content: center;
+}
+div.icons a {
+    margin: 5px;
+    /* add text and give text display none/ hidden */
+}
+div.icons img {
+    /* display: flex; */
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+}
+div.icons img:hover {
+    height: 50px;
+    width: 50px;
+    padding:15px;
+    border-radius: 50%;
+    background: rgb(57, 235, 255);
+    box-shadow: 0 0 10px 6px rgb(129, 228, 255);
+    /*give text-display... display*/
+}
+
+/* SECTION 3 PROJECTS*/
+.section3 {
+    margin: 10px 10px;
+    /*background-image: url('https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Ff7777045-7e88-4e8d-b08e-a8701f4d27c2_736x1312.png');*/
+
+}
+
+.section3-text{
+    margin: 0 10px;
+    padding: 10px 15px 5px;
+    text-shadow: 0px 1.3px 3px rgb(13, 0, 255);
+
+}
+p.section3-text {
+    background-color: rgba(0, 0, 0, 0.589);
+    border-radius: 20px;
+}
+
+#project-tiles {
+    margin: 30px 20px;
+    /*display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;*/
+    gap: 20px;
+    
+}
+
+.grid {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+
+}
+
+
+.tile {
+    margin: 0px 0px 10px;
+    padding: 0px;
+    max-width: 300px;
+    height: 100%;
+    max-height: 300px;
+    background: rgba(0, 0, 255, 0.624);
+    border: 5px solid blue;
+    border-radius: 25px;
+    box-shadow: 0 0 8px 4px rgb(129, 228, 255);
+}
+
+@media screen and (min-width: 900px) {
+    .tile{ margin: 0 30px 100px;
+    }
+}
+
+.tile:hover {
+    box-shadow: 0 0 12px 10px rgb(129, 228, 255);
+}
+
+.project-tile img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.tile-title {
+    padding: 10px 7px;
+    text-align: center;
+    font-weight: bold;
+}
+ 
+/* grid med screens*/
+@media screen and (max-width: 600px) {
+    .grid {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+    }
+}
+/* grid small screens*/
+@media screen and (max-width: 399px) {
+    .grid {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+}
+
+/* need to make this responsive so that the whole text appears centered and fully visible on all screen sizes
+I want there to be some space on the sides too; 
+I don't mind shrinking the text small on small screens;
+I would like to cut off the sides a certain amount to keep the middle portion large on small screens;
+it would be cool to use one of the pillars to make the S look like $ ; I want the M to be on the stairs*/
+
+
+/*** DEVELOPER STACK ***/
+#stack {
+    margin:0;
+}
+
+.section4-h2 {
+    margin: 20px 20px;
+    padding: 10px 15px 0;
+}
+.grid2 {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+.section4-container {
+    margin: 0 10px 15px;
+
+}
+.section4-container strong {
+    font-size: 15px;
+}
+.section4-left:hover, .section4-right:hover {
+    background: linear-gradient(blue, rgba(129, 196, 255, 0.418));
+    border-radius: 8px;
+}
+.section4-left {
+    margin: 0 15px 0 20px;
+    padding: 15px 20px 20px 20px;
+    background: linear-gradient(rgba(0, 0, 255, 0.738), rgba(0, 123, 255, 0.15));
+    border-radius: 10px;
+    line-height: 1.6em;
+    box-shadow: 0 0 8px 4px rgb(129, 228, 255);
+
+}
+.section4-right {
+    margin: 0 20px 0 15px;
+    padding: 15px 20px 20px 20px;
+    background: linear-gradient(rgba(0, 0, 255, 0.738), rgba(0, 123, 255, 0.15));
+    border-radius: 10px;
+    box-shadow: 0 0 8px 3px rgb(129, 228, 255);
+
+}
+.section4-right p{
+    padding: 0 0 10px;
+    line-height: 1.6em;
+
+}
+
+.sp-effects:hover {
+    padding: 2px 3px;
+    font-size:1.5em;
+    color: blue;
+    background: aliceblue;
+    
+}
+
+@media screen and (max-width:500px) {
+    .grid2 {
+        display:grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .section4-container {
+        margin: 0 25px 15px;
+    
+    }
+    .section4-left {
+        margin: 0 10px 20px;
+        padding: 20px;
+        background: linear-gradient(rgba(0, 0, 255, 0.738), rgba(0, 123, 255, 0.15));
+        border-radius: 7px;
+        line-height: 1.6em;
+    
+    }
+    .section4-right {
+        margin: 0 10px 20px;
+        padding: 20px;
+        background: linear-gradient(rgba(0, 0, 255, 0.738), rgba(0, 123, 255, 0.15));
+        border-radius: 7px;
+    }
+
+}
+
+/*** SECTION 5: SPECTOPS***/
+
+#SpecTops {
+    margin: 20px;
+}
+.section5-h2 {
+    margin: 15px 15px;
+    padding: 10px 5px 0;
+}
+.section5-container {
+    background: linear-gradient(rgba(0, 0, 255, 0.738), rgba(0, 123, 255, 0.15));
+    border-radius: 7px;
+    margin: 0 15px;
+    padding: 30px 30px;
+    box-shadow: 0 0 8px 3px rgb(129, 228, 255);
+
+}
+.section5-container:hover {
+    background: linear-gradient(blue, rgba(129, 196, 255, 0.418));
+    border-radius: 8px;
+}
+.section5-text {
+    padding: 10px 0;
+    line-height: 1.6em;
+
+}
+.section5-text strong{
+    font-size: 14px;
+}
+
+.quote-div {
+    margin: 0;
+    padding: 30px 50px;
+    background:linear-gradient(rgba(0, 0, 0, 0.565), rgba(0, 10, 122, 0.372));
+    text-align: center;
+}
+.quote-div:hover {
+    background: aliceblue;
+}
+.quote-div h3, .quote-div p {
+    max-width: 400px;
+    margin: 15px auto;
+    text-shadow: 0 1.5px 3px rgb(0, 166, 255);
+
+
+}
+.quote:hover {
+    text-shadow: 0 0 25px rgb(0, 149, 255);
+
+}
