@@ -337,7 +337,7 @@ it would be cool to use one of the pillars to make the S look like $ ; I want th
 
 .section4-h2 {
     margin: 20px 20px;
-    padding: 10px 15px 0;
+    padding: 10px 15px 0px;
 }
 .grid2 {
     display:grid;
@@ -420,7 +420,7 @@ it would be cool to use one of the pillars to make the S look like $ ; I want th
 }
 .section5-h2 {
     margin: 15px 15px;
-    padding: 10px 5px 0;
+    padding: 10px 5px 10px;
 }
 .section5-container {
     background: linear-gradient(rgba(0, 0, 255, 0.738), rgba(0, 123, 255, 0.15));
