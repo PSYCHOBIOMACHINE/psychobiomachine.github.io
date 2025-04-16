@@ -1,0 +1,361 @@
+*, :before, :after {
+    box-sizing: border-box;
+    margin: 0;
+    max-width: 100vw;
+
+  }
+
+body {
+    margin: 0 auto;
+    max-width: 1024px;
+    background:linear-gradient(
+        black 1%,
+        rgb(0, 0, 70) 14%,
+        rgb(132, 255, 255) 20%,
+        rgb(68, 255, 255) 30%,
+        blue 65%,
+        rgb(0, 0, 162),
+        rgb(0, 0, 76));
+
+}
+  h1, h2, h3 { 
+    font-family: Orbitron, sans-serif;
+    font-weight: 800;
+  }
+  p {
+    font-family: monospace;
+    font-weight: 200;
+    letter-spacing: 0.02em;
+  }
+  
+  /* Logo & Nav Bar */
+  
+  #header {
+    width:100%;
+    height: 45px;
+    max-height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  #header-img {
+    padding: 5px 5px 3px 10px;
+  }
+  
+  nav {
+    max-width: 100vw;
+    height: 100%;
+    padding-inline-start:0;
+    padding-right:1px;
+  
+  }
+  
+  nav > ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    height:100%
+  }
+  
+  nav > ul > li {
+    height:100%;
+    font-size: .8rem;
+    font-family: Orbitron, sans-serif;
+    font-weight:800;
+    color: white;
+    margin: 1 0.5 rem;
+    padding: 14px 10px;
+    display: block;
+  
+  }
+  nav > ul > li:hover {
+    background: linear-gradient(lime, green);
+    border-radius: 3px;
+  }
+
+  nav>ul>li>a {
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 700px) {
+    #header {
+        height: 100px;
+        max-height: 100px;
+        display: block;
+    }
+    #header-img {
+        display:block;
+        max-height: 50%;
+        margin: 0 auto;
+    }
+    nav {
+        margin:0;
+        display:flex;
+        justify-content: space-evenly;
+        width:100%;
+    }
+    nav > ul {
+        flex-flow: column wrap;
+        height:50%;
+        margin:0;
+        padding:0;
+    }
+}
+ 
+.sections {
+    
+}
+
+/* Section 1 */
+  
+  .hero-img {
+    display:flex;
+    width: 100%;
+    padding-bottom:0;
+  }
+  
+/* Section 2 */
+  
+  .section2 {
+    margin:0 auto;
+    padding: 5px 15px 25px 15px;
+    background-color:white;
+    height: auto;
+    width: 100%;
+  }
+  .sec2-h2{
+    margin: 20px 30px;
+    padding-bottom:15px;
+    font-weight:800;
+    display: block;
+    text-align:center;
+    color: black;
+    /*
+    background-color: rgba(0, 229, 255, 0.277);
+    box-shadow: 0px 0px 10px rgb(0, 229, 255);
+    */
+
+  }
+
+  .sec2-p {
+    margin: 20px 25px;
+    text-align: justify;
+  }
+
+  .sec2-p strong {
+    color:rgb(0, 203, 0);
+  }
+  
+
+
+  /* Section 3 */
+  
+  .section3 {
+    margin: 0 auto;
+    padding: 10px;
+    color: white;
+    background:linear-gradient(rgb(84, 255, 255),blue);
+    display: block;
+    height: auto;  
+}
+
+  .sec3-h2{
+    margin: 20px 20px;
+    padding: 15px 0 15px 0;
+    border-radius: 8px;
+    background-color:rgb(0, 0, 0);
+    box-shadow: 0px 0px 10px 7px rgb(0, 229, 255);
+    font-weight:800;
+    display: block;
+    text-align:center;
+  }
+  @media (max-width:900px) {
+    .sec3-h2 {margin: 20px 10px;}
+  }
+
+  .sec3div {
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    gap:30px;
+    height: auto;
+    padding: 20px;
+
+  }
+  @media (max-width:900px) {
+    .sec3div {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+  }
+
+}
+
+
+/* ingredients points*/
+  .sec3div-container1 {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column; 
+    padding-bottom: 5px;
+
+  }
+
+  .sec3div-container1 h3{
+    margin: 0 auto;
+    width: auto;
+    padding: 15px;
+    border-radius: 7px;
+    background-color:black;
+    box-shadow: 0px 0px 10px 7px rgb(0, 229, 255);
+
+    
+  }
+
+  .sec3div-container1 p {
+    margin: 6px auto;
+    width: auto;
+    padding: 15px;
+    border-radius: 7px;
+    background-color:black;
+    box-shadow: 0px 0px 10px 7px rgb(0, 229, 255);
+
+  }
+
+  .sec3-cont1-spacebetween {
+    padding-bottom: 10px;
+  }
+  .sec3div-container1 .quote-div h2{
+    background-color: transparent;
+    text-align: center;
+    padding: 20px 30px 15px 30px;
+    
+  }
+  .sec3div-container1 .quote-p {
+    margin: 0 auto;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    text-align: center;
+  }
+  .quote-div:hover{
+    color:rgb(180, 251, 253);
+  }
+
+/* nutrition facts image*/
+  .sec3div-container2 {
+    justify-content: center;
+    padding: 0 0 0 0;
+
+    
+
+  }
+
+  .nutrition-label-img {
+    display:block;
+    margin: 1px auto;
+    justify-content: center;
+    width: auto;
+    min-width: 100%;
+    max-width:100%;
+    max-height:100%;
+    background: white;
+    border: 10px solid black;
+    border-right: 9px solid black;
+    border-radius: 7px;
+    box-shadow: 0px 0px 10px 9px rgb(0, 229, 255);
+
+  }
+
+  @media (max-width:900px){
+    .sec3div-container2 {
+        padding-top: 0px;
+        padding-bottom: 20px
+    }
+  }
+
+
+  /* Section 4 video*/
+
+
+.section4 {
+    margin: 0;
+    background-color:blue;
+    padding: 0 25px 25px 25px;
+    height: auto;
+}
+
+  .section4 iframe {
+    display: block;
+    height: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius:20px;
+    border: 2px solid rgb(0, 229, 255);
+    box-shadow: 0px 0px 10px 10px rgb(0, 229, 255);
+    
+}
+
+@media (max-width:900px) {
+    .section4 {
+        padding:10px 20px 30px 20px;
+    }
+    .section4 iframe {
+        height: 500px;
+        width: 100%;
+    }
+}
+  
+  
+  
+  /* footer */
+  footer {
+    margin:auto 0;
+    padding: 85px 0 20px 0;
+    height: 300px;
+    max-height: 300px;
+    background-color: black;
+  }
+  
+  .p-footer {
+    font-family: "Open Sans";
+    margin: 0 20px;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: white;
+  }
+   #email {
+     display:block;
+     margin: 0 auto;
+     width: 300px;
+     height: 30px;
+     color: white;
+     border: 0;
+     border-radius:3px;
+   }
+   #submit {
+     display:block;
+     margin: 10px auto;
+     width: 100px;
+     height: 35px;
+     border-radius: 20px;
+     color:white;
+     font-family: "Open Sans";
+     background: linear-gradient(blue, aqua);
+     border:0;
+   }
+  
+   #submit:hover{
+     background:linear-gradient(white,aqua);
+     box-shadow: 0px 0px 15px 2px white;
+   }
+  
+    
+  
+  
