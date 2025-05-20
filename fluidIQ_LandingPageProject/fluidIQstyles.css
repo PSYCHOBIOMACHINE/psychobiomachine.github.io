@@ -106,9 +106,7 @@ body {
     }
 }
  
-.sections {
-    
-}
+/* .sections {} */
 
 /* Section 1 */
   
@@ -356,6 +354,26 @@ body {
      box-shadow: 0px 0px 15px 2px white;
    }
   
+   .background-return-button {
+    background-color:blue
+   }
+    .background-return-button>button {
+      display: flex;
+      margin: 0 auto;
+      color:blue;
+      background-color: white;
+      border: 3px solid white;
+      border-radius: 2px;
+      font-family: orbitron;
+      font-weight: 500;
+    }
+    .background-return-button>button:hover {
+      background-color: blue;
+    }
+    .background-return-button > button > a{
+      text-decoration: none;
+      color: blue;
+    }
     
   
   
